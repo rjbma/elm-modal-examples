@@ -1,0 +1,103 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+  color: #293c4b;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 200px;
+}
+
+.modal-container {
+    border: 1px solid #333;
+    padding: 10px;
+    background-color: white;
+    border-radius: 0px 0px 0px 0px;
+    position: fixed;
+    overflow: hidden;
+    transition: transform 0.2s ease-out;
+    z-index: 200;
+}
+
+.modal--top .modal-container {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-width: 0px 0px 1px 0px;
+    transform: translate(0%, -100%);
+}
+.modal--top.modal-isOpen .modal-container {
+    transform: translate(0%, 0%);
+}
+
+.modal--right .modal-container {
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    border-width: 0px 0px 0px 1px;
+    transform: translate(100%, 0%);
+}
+.modal--right.modal-isOpen .modal-container {
+    transform: translate(0%, 0%);
+}
+
+.modal--bottom .modal-container {
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border-width: 1px 0px 0px 0px;
+    transform: translate(0%, 100%);
+}
+.modal--bottom.modal-isOpen .modal-container {
+    transform: translate(0%, 0%);
+}
+
+.modal--left .modal-container {
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    border-width: 0px 1px 0px 0px;
+    transform: translate(-100%, 0%);
+}
+.modal--left.modal-isOpen .modal-container {
+    transform: translate(0%, 0%);
+}
+
+.modal-backdrop {
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: rgba(0,0,0,0);
+    z-index: 100;
+    display: none;
+}
+.modal-isOpen .modal-backdrop {
+   background: rgba(0,0,0,0.4);
+   display: block;
+ }
+
+.modal--error .modal-container {
+    background-color: red;
+    color: white;
+ }
+
+.modal--info .modal-container {
+    background-color: #D9EDF7;
+    color: #333;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+    border-width: 1px;
+ }
+.modal-isOpen.modal--info .modal-container {
+    top: 50px;
+}
+
+.message {
+  min-height: 200px;
+}
